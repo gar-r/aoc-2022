@@ -1,27 +1,6 @@
 package main
 
-var example = []*Monkey{
-	{
-		Items:       []int64{79, 98},
-		InspectFn:   MulInspectingFn(19),
-		TargetingFn: ModuloTargetingFn(23, 2, 3),
-	},
-	{
-		Items:       []int64{54, 65, 75, 74},
-		InspectFn:   AddInspectingFn(6),
-		TargetingFn: ModuloTargetingFn(19, 2, 0),
-	},
-	{
-		Items:       []int64{79, 60, 97},
-		InspectFn:   SquareInspectingFn(),
-		TargetingFn: ModuloTargetingFn(13, 1, 3),
-	},
-	{
-		Items:       []int64{74},
-		InspectFn:   AddInspectingFn(3),
-		TargetingFn: ModuloTargetingFn(17, 0, 1),
-	},
-}
+var D int64 = 3 * 13 * 19 * 17 * 5 * 7 * 11 * 2
 
 var input = []*Monkey{
 	{

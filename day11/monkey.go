@@ -14,7 +14,7 @@ func (m *Monkey) InspectItem() {
 }
 
 func (m *Monkey) FinishInspect() {
-	m.Items[0] /= 3
+	m.Items[0] = m.Items[0] % D
 }
 
 func (m *Monkey) ThrowItem(others []*Monkey) {

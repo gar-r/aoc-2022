@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	stats := simulate(input, 20)
+	stats := simulate(input, 10000)
 	inspects := stats.InspectValues()
 	sort.Sort(sort.Reverse(sort.IntSlice(inspects)))
 	fmt.Printf("first top inspect count: %d\n", inspects[0])
