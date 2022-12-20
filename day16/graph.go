@@ -29,6 +29,14 @@ func NewGraph(valves []*Valve, start string) *Graph {
 	return g
 }
 
+func (g *Graph) Valves() []*Valve {
+	valves := make([]*Valve, 0)
+	for _, v := range g.nodes {
+		valves = append(valves, v)
+	}
+	return valves
+}
+
 type Valve struct {
 	Id      string
 	Rate    int
@@ -47,6 +55,5 @@ func (v *Valve) Neighbors(g *Graph) []*Valve {
 }
 
 func (v *Valve) String() string {
-	return fmt.Sprintf("{id: %s, rate: %d} => %v",
-		v.Id, v.Rate, v.Tunnels)
+	return fmt.Sprintf("{%s}", v.Id)
 }
